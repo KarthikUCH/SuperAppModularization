@@ -10,6 +10,4 @@ rootProject.name = "AppModularization"
 include ':app'
 include ':feature-shoppingcart'
 include ':feature-customer'
-include ':lib-shoppingcart'
-include ':lib-costumer'
 include ':lib-navigation'

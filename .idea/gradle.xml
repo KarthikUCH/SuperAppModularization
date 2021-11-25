@@ -14,9 +14,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/feature-customer" />
             <option value="$PROJECT_DIR$/feature-shoppingcart" />
-            <option value="$PROJECT_DIR$/lib-costumer" />
             <option value="$PROJECT_DIR$/lib-navigation" />
-            <option value="$PROJECT_DIR$/lib-shoppingcart" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

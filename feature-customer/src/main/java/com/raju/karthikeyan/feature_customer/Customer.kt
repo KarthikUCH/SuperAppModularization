@@ -1,4 +1,4 @@
-package com.raju.karthikeyan.lib_costumer.model
+package com.raju.karthikeyan.feature_customer
 
 data class Customer(
     val name: String,

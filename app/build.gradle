@@ -42,8 +42,6 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
     implementation project(path: ':feature-shoppingcart')
     implementation project(path: ':feature-customer')
-    implementation project(path: ':lib-costumer')
-    implementation project(path: ':lib-shoppingcart')
     implementation project(path: ':lib-navigation')
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

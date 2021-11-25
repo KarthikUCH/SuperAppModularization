@@ -10,7 +10,7 @@ object Activities {
         val args = Bundle().apply { putString(ExtraKey.SHOPPING_CART_EXTRA, state) }
         return Intent(ActivityClassName.APP_SHOPPING_CART).setPackage(context?.packageName)
             ?.apply {
-                addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
+                //addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
                 putExtras(args)
             }
     }
@@ -19,7 +19,7 @@ object Activities {
         val args = Bundle().apply { putString(ExtraKey.CUSTOMER_EXTRA, state) }
         return Intent(ActivityClassName.APP_CUSTOMER).setPackage(context?.packageName)
             ?.apply {
-                addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
+                //addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
                 putExtras(args)
             }
     }

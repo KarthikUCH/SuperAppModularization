@@ -3,6 +3,7 @@ package com.raju.karthikeyan.feature_shoppingcart
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.raju.karthikeyan.feature_shoppingcart.databinding.ActivityShoppingCartBinding
+import com.raju.karthikeyan.lib_costumer.api.CustomerApi
 import com.raju.karthikeyan.lib_navigation.Activities
 
 class ShoppingCartActivity : AppCompatActivity() {
@@ -16,6 +17,7 @@ class ShoppingCartActivity : AppCompatActivity() {
     }
 
     private fun init(){
+        binding.tvCustomerName.text = CustomerApi.getInstance().getCustomer(1).name
         binding.buttonCustomer.setOnClickListener {
             openCustomerActivity()
         }

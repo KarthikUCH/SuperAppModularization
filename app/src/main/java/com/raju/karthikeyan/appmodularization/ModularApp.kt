@@ -1,10 +1,11 @@
 package com.raju.karthikeyan.appmodularization
 
 import android.app.Application
+import com.raju.karthikeyan.feature_customer.CustomerFeatureApi
 import com.raju.karthikeyan.lib_costumer.api.CustomerApi
 import com.raju.karthikeyan.lib_shoppingcart.api.ShoppingCartApi
 
-class ModularApp: Application() {
+class ModularApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
@@ -13,13 +14,11 @@ class ModularApp: Application() {
 
     private fun commonInit() {
         initShoppintCart()
-        initCustomer()
+        initCustomerFeature()
     }
 
-    private fun initCustomer() {
-        CustomerApi
-            .Builder(this)
-            .build()
+    private fun initCustomerFeature() {
+        CustomerFeatureApi().initCustomerLib(this)
     }
 
     private fun initShoppintCart() {

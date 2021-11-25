@@ -1,20 +1,28 @@
 package com.raju.karthikeyan.lib_costumer.api
 
 import android.content.Context
-import com.raju.karthikeyan.lib_costumer.CustomerDB
 import com.raju.karthikeyan.lib_costumer.model.Customer
 
-class CustomerApi private constructor(val builder: Builder): CustomerContract {
+class CustomerApi private constructor(val builder: Builder) : CustomerContract {
+
+    var customerFeatureApi: CustomerContract
 
     init {
         INSTANCE = this
+        this.customerFeatureApi = builder.customerFeatureApi
     }
+
     override fun getCustomer(customerId: Long): Customer {
-        // Assume as getting customer from any persistance storage
-        return CustomerDB.getCustomer(1)
+        return customerFeatureApi.getCustomer(customerId)
     }
 
     class Builder(val context: Context) {
+        lateinit var customerFeatureApi: CustomerContract
+
+        fun withCustomerApi(customerFeatureApi: CustomerContract): Builder {
+            this.customerFeatureApi = customerFeatureApi
+            return this
+        }
 
         fun build(): CustomerApi = CustomerApi(this)
     }

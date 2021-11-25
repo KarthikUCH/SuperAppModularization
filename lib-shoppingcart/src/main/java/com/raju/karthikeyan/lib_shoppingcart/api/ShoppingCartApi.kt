@@ -6,6 +6,10 @@ import com.raju.karthikeyan.lib_shoppingcart.ShoppingCartManager
 
 class ShoppingCartApi private constructor(val builder: Builder) : ShoppingCartContract {
 
+    init {
+        INSTANCE = this
+    }
+
     private lateinit var shoppingCartListener: ShoppingCartListener
 
     override fun addCustomer(customer: Customer) {
